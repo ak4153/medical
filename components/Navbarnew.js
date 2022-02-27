@@ -101,7 +101,7 @@ function Navbar() {
   );
 }
 const NavbarContainerWrapper = styled.div`
-  @media only screen and (max-width: 1920px) {
+  @media only screen and (max-width: 2000px) {
     margin: 25px;
     box-shadow: 0px 1px 25px 7px rgba(20, 93, 160, 0.88);
     border-radius: 10px;
@@ -144,7 +144,7 @@ const NavbarContainerWrapper = styled.div`
 `;
 
 const NavbarWrapper = styled.nav`
-  @media only screen and (max-width: 1900px) {
+  @media only screen and (max-width: 2000px) {
     display: flex;
 
     flex-direction: row;
