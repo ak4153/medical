@@ -92,6 +92,7 @@ export default function Slideshow() {
 const CarouselWrapper = styled(Carousel)`
   margin-top: 20px;
   margin-bottom: 20px;
+
   @media only screen and (max-width: ${({ res }) => res + 75}px) {
     width: ${({ res }) => res}px;
     height: 400px;

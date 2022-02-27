@@ -41,14 +41,15 @@ function Content() {
         <Grid item className={classess.section}>
           <h1>ברוכים הבאים</h1>
         </Grid>
-        <Grid
+
+        <SlideshowContainerWrapper
           item
           style={{ paddingLeft: '25px', paddingRight: '25px' }}
           className={(classess.section, classess.colorDividerTop)}
           xs={12}
         >
           <Slideshow></Slideshow>
-        </Grid>
+        </SlideshowContainerWrapper>
 
         <Grid
           item
@@ -79,7 +80,7 @@ function Content() {
             לקוחות מספרים
           </h1>
 
-          <GridCardContainer container spacing={1}>
+          <GridCardContainer container>
             <Grid item>
               <CardWrapper>
                 <CardMedia
@@ -133,12 +134,16 @@ function Content() {
     </Box>
   );
 }
-
+const SlideshowContainerWrapper = styled(Grid)`
+  display: flex;
+  justify-content: center;
+`;
 const CardWrapper = styled(Card)`
   width: 100px;
   background-color: #2e8bc0;
   margin-left: 50px;
   transform: translate(0);
+  margin-top: 20px;
   transition: all 0.2s ease-in-out;
 
   &:hover {
