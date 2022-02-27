@@ -13,6 +13,8 @@ import Slideshow from '../components/Slideshow';
 import DividerText from './DividerText';
 import Tounge from './Tounge';
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+
 function Content() {
   const [showTounge, setShowTounge] = useState(false);
   const classess = useStyles();
@@ -84,7 +86,7 @@ function Content() {
             xs={12}
           >
             <Grid item>
-              <Card className={classess.card}>
+              <CardWrapper>
                 <CardMedia
                   component="img"
                   height="100"
@@ -92,11 +94,11 @@ function Content() {
                   alt="costumer"
                 />
                 <CardContent>תוכן</CardContent>
-              </Card>
+              </CardWrapper>
             </Grid>
 
             <Grid item>
-              <Card className={classess.card}>
+              <CardWrapper>
                 <CardMedia
                   component="img"
                   height="100"
@@ -105,10 +107,10 @@ function Content() {
                 />
 
                 <CardContent>תוכן</CardContent>
-              </Card>
+              </CardWrapper>
             </Grid>
             <Grid item>
-              <Card className={classess.card}>
+              <CardWrapper>
                 <CardContent>תוכן</CardContent>
                 <CardMedia
                   component="img"
@@ -116,10 +118,11 @@ function Content() {
                   image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9IqDCKUuuoYheSJ9M5gayAHaHa%26pid%3DApi&f=1"
                   alt="costumer"
                 />
-              </Card>
+              </CardWrapper>
             </Grid>
+
             <Grid item>
-              <Card className={classess.card}>
+              <CardWrapper>
                 <CardContent>תוכן</CardContent>
                 <CardMedia
                   component="img"
@@ -127,7 +130,7 @@ function Content() {
                   image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.uV0uFWDIFjafNVbrbLy_UQHaJv%26pid%3DApi&f=1"
                   alt="costumer"
                 />
-              </Card>
+              </CardWrapper>
             </Grid>
           </Grid>
         </Grid>
@@ -135,4 +138,17 @@ function Content() {
     </Box>
   );
 }
+
+const CardWrapper = styled(Card)`
+  width: 100px;
+  background-color: #2e8bc0;
+  margin-left: 50;
+  transform: translate(0);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translate(0, -20px);
+    transition: all 0.2s ease-in-out;
+  }
+`;
 export default dynamicSSR(Content);
