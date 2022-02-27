@@ -6,22 +6,37 @@ import MenuSharpIcon from '@material-ui/icons/MenuSharp';
 import NextLink from 'next/link';
 import { Button } from '@material-ui/core';
 import styled from 'styled-components';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 function Navbar() {
   const [showXsNav, setShowXsNav] = useState(false);
+
   const classess = useStyles();
+
   const handleClick = () => {
     setShowXsNav((prev) => (prev = !prev));
   };
+
   useEffect(() => {
     console.log(showXsNav);
   }, [showXsNav]);
+
   return (
     <NavbarContainerWrapper>
       <div className="navbar__burger-container">
-        <Button className="navbar__burger" onClick={handleClick}>
-          <MenuSharpIcon
-            style={{ fontSize: '50px', color: 'white' }}
-          ></MenuSharpIcon>
+        <Button
+          disableRipple
+          className={!showXsNav ? 'navbar__burger' : 'navbar__burger-animate'}
+          onClick={handleClick}
+        >
+          {!showXsNav ? (
+            <MenuSharpIcon
+              style={{ fontSize: '50px', color: 'white' }}
+            ></MenuSharpIcon>
+          ) : (
+            <ArrowUpwardIcon
+              style={{ fontSize: '50px', color: 'white' }}
+            ></ArrowUpwardIcon>
+          )}
         </Button>
       </div>
 
@@ -110,28 +125,49 @@ const NavbarContainerWrapper = styled.div`
       display: initial;
       align-self: flex-start;
       position: absolute;
+      &::after {
+        text-align: center;
+        font-size: 30px;
+        content: '🔥';
+      }
+    }
+
+    .navbar__burger-animate {
+      transform: rotate(180deg);
+      transition: all 0.2s linear;
+    }
+    .navbar__burger {
+      transform: rotate(360deg);
+      transition: all 0.2s linear;
     }
   }
 `;
 
 const NavbarWrapper = styled.nav`
-  display: flex;
+  @media only screen and (max-width: 1900px) {
+    display: flex;
 
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: #145da0;
-  height: 75px;
-  padding: 10;
-  text-align: right;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #145da0;
+    height: 75px;
+    padding: 10;
+    text-align: right;
 
-  width: 100%;
-  border: 2px solid black;
-  border-radius: 10px;
-  color: #b1d4e0;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #b1d4e0;
 
-  font-size: 30px;
-  font-weight: 800;
+    font-size: 30px;
+    font-weight: 800;
+
+    &::before {
+      font-size: 40px;
+      content: '🔥';
+    }
+  }
 
   @media only screen and (max-width: 768px) {
     .navbar__link-container {
@@ -139,6 +175,9 @@ const NavbarWrapper = styled.nav`
       margin-top: 50px;
     }
 
+    &::before {
+      content: '';
+    }
     ${({ showXsNav }) =>
       showXsNav
         ? ` 
