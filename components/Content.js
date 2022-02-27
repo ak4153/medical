@@ -79,12 +79,7 @@ function Content() {
             לקוחות מספרים
           </h1>
 
-          <Grid
-            container
-            className={classess.cardContainer}
-            spacing={4}
-            xs={12}
-          >
+          <GridCardContainer container spacing={1}>
             <Grid item>
               <CardWrapper>
                 <CardMedia
@@ -132,7 +127,7 @@ function Content() {
                 />
               </CardWrapper>
             </Grid>
-          </Grid>
+          </GridCardContainer>
         </Grid>
       </Grid>
     </Box>
@@ -142,7 +137,7 @@ function Content() {
 const CardWrapper = styled(Card)`
   width: 100px;
   background-color: #2e8bc0;
-  margin-left: 50;
+  margin-left: 50px;
   transform: translate(0);
   transition: all 0.2s ease-in-out;
 
@@ -150,5 +145,11 @@ const CardWrapper = styled(Card)`
     transform: translate(0, -20px);
     transition: all 0.2s ease-in-out;
   }
+`;
+const GridCardContainer = styled(Grid)`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-direction: row-reverse;
 `;
 export default dynamicSSR(Content);
