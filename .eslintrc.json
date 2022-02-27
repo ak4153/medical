@@ -1,5 +1,5 @@
 {
+  "react/jsx-key": [false, { "checkFragmentShorthand": false }],
   "env": { "browser": true, "node": true, "es6": true },
-  "extends": ["next", "next/core-web-vitals"],
-  "react/jsx-key": [false, { "checkFragmentShorthand": false }]
+  "extends": ["next", "next/core-web-vitals"]
 }
