@@ -38,9 +38,7 @@ function Content() {
     <Box className={classess.content}>
       <Tounge showTounge={showTounge}></Tounge>
       <Grid container className={classess.contentContainer}>
-        <Grid item className={classess.section}>
-          <h1>ברוכים הבאים</h1>
-        </Grid>
+        <Grid item className={classess.section}></Grid>
 
         <SlideshowContainerWrapper
           item

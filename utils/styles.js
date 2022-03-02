@@ -3,18 +3,18 @@ import { keyframes } from 'styled-components';
 
 const useStyles = makeStyles({
   content: {
-    backgroundColor: '#B1D4E0',
+    backgroundColor: '#DBE8E1',
     textAlign: 'right',
     position: 'relative',
   },
   colorDividerTop: {
-    backgroundColor: '#2E8BC0',
+    backgroundColor: '#DBE8E1',
     width: '100%',
     clipPath:
       'polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px))',
   },
   colorDividerBottom: {
-    backgroundColor: '#145DA0',
+    backgroundColor: '#DBE8E1',
     width: '100%',
     clipPath: 'polygon(0 0,50% 50px,100% 0,100% 100%,0 100%)',
     marginTop: '-50px',
@@ -76,11 +76,27 @@ const useStyles = makeStyles({
       color: '#B1D4E0',
     },
   },
-  movingCards: {},
 });
 export default useStyles;
 
 /* 
+Red
+#E10032
+
+Seafoam Green
+#DBE8E1
+
+Dark Blue
+#1B4480
+
+Forest Green
+#013120
+
+
+
+
+
+
 https://www.canva.com/colors/color-palettes/mermaid-lagoon/
 Midnight Blue
 #145DA0
