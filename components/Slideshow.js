@@ -27,13 +27,14 @@ export default function Slideshow() {
       <div className="App">
         <CarouselWrapper
           transitionMs={1000}
-          autoPlaySpeed={200}
+          autoPlaySpeed={5000}
           enableAutoPlay={true}
           res={res}
           breakPoints={breakPoints}
           itemsToShow={1}
           easing="ease"
           pagination={false}
+          showArrows={res < 426 ? false : true}
         >
           <Item>
             {' '}
@@ -52,7 +53,7 @@ export default function Slideshow() {
           <Item>
             {' '}
             <img
-              src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2061.00.jpg"
+              src="http://www.physicaltherapistalliance.com/wp-content/uploads/2013/11/iStock_000028360432XSmall.jpg"
               alt="img"
             />
           </Item>
@@ -111,7 +112,7 @@ const CarouselWrapper = styled(Carousel)`
 
   @media only screen and (max-width: ${({ res }) => res + 75}px) {
     width: ${({ res }) => res}px;
-    height: 400px;
+    height: ${({ res }) => (res < 426 ? 100 : 400)}px;
   }
 `;
 const Item = styled.div`
@@ -129,14 +130,6 @@ const Item = styled.div`
     transition: all 0.5s;
     &:hover {
       transition: 0.5s ease-in-out;
-      transform: scale(1.5, 1.5);
-    }
-  }
-  @keyframes zoom-in-zoom-out {
-    0% {
-      transform: scale(1, 1);
-    }
-    100% {
       transform: scale(1.5, 1.5);
     }
   }

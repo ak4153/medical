@@ -48,7 +48,63 @@ function Content() {
         >
           <Slideshow></Slideshow>
         </SlideshowContainerWrapper>
+        <GridCardContainer container>
+          <Grid item>
+            <CardWrapper>
+              <CardMedia
+                component="img"
+                height="100"
+                image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.evidentlycochrane.net%2Fwp-content%2Fuploads%2F2016%2F02%2FiStock_nursepatient_Medium-e1455016519704.jpg&f=1&nofb=1"
+                alt="costumer"
+              />
+              <CardContent>
+                <p>אחות לילה</p>
+              </CardContent>
+            </CardWrapper>
+          </Grid>
 
+          <Grid item>
+            <CardWrapper>
+              <CardMedia
+                component="img"
+                height="100"
+                image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblogs.ed.ac.uk%2Fbulletin-magazine%2Fwp-content%2Fuploads%2Fsites%2F1304%2F2020%2F11%2F2958-scaled.jpg&f=1&nofb=1"
+                alt="costumer"
+              />
+
+              <CardContent>
+                <p>אחות לאחר ניתוח</p>
+              </CardContent>
+            </CardWrapper>
+          </Grid>
+          <Grid item>
+            <CardWrapper>
+              <CardContent>
+                <p>מטפלת סיעודית</p>
+              </CardContent>
+              <CardMedia
+                component="img"
+                height="100"
+                image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F1707%2F24978997901_3a1d1ed567_b.jpg&f=1&nofb=1"
+                alt="costumer"
+              />
+            </CardWrapper>
+          </Grid>
+
+          <Grid item>
+            <CardWrapper>
+              <CardContent>
+                <p>אחות פרטית</p>
+              </CardContent>
+              <CardMedia
+                component="img"
+                height="100"
+                image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flive.staticflickr.com%2F8610%2F16384414998_3deb931407_b.jpg&f=1&nofb=1"
+                alt="costumer"
+              />
+            </CardWrapper>
+          </Grid>
+        </GridCardContainer>
         <Grid
           item
           xs={12}
@@ -65,69 +121,7 @@ function Content() {
           item
           className={(classess.section, classess.colorDividerBottom)}
           xs={12}
-        >
-          <h1
-            style={{
-              justifySelf: 'right',
-              float: 'right',
-              padding: '10px',
-              marginRight: '100px',
-              paddingTop: '70px',
-            }}
-          >
-            לקוחות מספרים
-          </h1>
-
-          <GridCardContainer container>
-            <Grid item>
-              <CardWrapper>
-                <CardMedia
-                  component="img"
-                  height="100"
-                  image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.bridgespan.org%2Fbridgespan%2FImages%2Farticles%2Fexecutive-summary-putting-clients-at-the-center%2Ffour-oaks-two-girls-280x280.png%3Fext%3D.png&f=1&nofb=1"
-                  alt="costumer"
-                />
-                <CardContent>תוכן</CardContent>
-              </CardWrapper>
-            </Grid>
-
-            <Grid item>
-              <CardWrapper>
-                <CardMedia
-                  component="img"
-                  height="100"
-                  image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.6F3GxZU97pMeY-OAY-AVTwHaEK%26pid%3DApi&f=1"
-                  alt="costumer"
-                />
-
-                <CardContent>תוכן</CardContent>
-              </CardWrapper>
-            </Grid>
-            <Grid item>
-              <CardWrapper>
-                <CardContent>תוכן</CardContent>
-                <CardMedia
-                  component="img"
-                  height="100"
-                  image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.9IqDCKUuuoYheSJ9M5gayAHaHa%26pid%3DApi&f=1"
-                  alt="costumer"
-                />
-              </CardWrapper>
-            </Grid>
-
-            <Grid item>
-              <CardWrapper>
-                <CardContent>תוכן</CardContent>
-                <CardMedia
-                  component="img"
-                  height="100"
-                  image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.uV0uFWDIFjafNVbrbLy_UQHaJv%26pid%3DApi&f=1"
-                  alt="costumer"
-                />
-              </CardWrapper>
-            </Grid>
-          </GridCardContainer>
-        </Grid>
+        ></Grid>
       </Grid>
     </Box>
   );
@@ -150,9 +144,17 @@ const CardWrapper = styled(Card)`
   }
 `;
 const GridCardContainer = styled(Grid)`
+  border-top: 1px #05445e solid;
+
+  width: 80%;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
   flex-direction: row-reverse;
+  p {
+    font-weight: 800;
+    font-size: 20px;
+    margin: 0;
+  }
 `;
 export default dynamicSSR(Content);
