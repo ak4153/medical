@@ -116,7 +116,6 @@ function Content() {
         <Grid item className={classess.section}>
           תוכן
         </Grid>
-
         <Grid
           item
           className={(classess.section, classess.colorDividerBottom)}
