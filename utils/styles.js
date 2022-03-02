@@ -14,7 +14,7 @@ const useStyles = makeStyles({
       'polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px))',
   },
   colorDividerBottom: {
-    backgroundColor: '#DBE8E1',
+    backgroundColor: '#E9EAE0',
     width: '100%',
     clipPath: 'polygon(0 0,50% 50px,100% 0,100% 100%,0 100%)',
     marginTop: '-50px',

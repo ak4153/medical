@@ -1,14 +1,14 @@
 import Carousel from 'react-elastic-carousel';
 import img1 from '../assets/a.jpg';
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useStyles from '../utils/styles';
 
 const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 },
+  { width: 1200, itemsToShow: 1 },
+  { width: 1200, itemsToShow: 1 },
+  { width: 1200, itemsToShow: 1 },
+  { width: 1200, itemsToShow: 1 },
 ];
 
 export default function Slideshow() {
@@ -25,18 +25,34 @@ export default function Slideshow() {
   return (
     <>
       <div className="App">
-        <CarouselWrapper res={res} breakPoints={breakPoints}>
+        <CarouselWrapper
+          transitionMs={1000}
+          autoPlaySpeed={200}
+          enableAutoPlay={true}
+          res={res}
+          breakPoints={breakPoints}
+          itemsToShow={1}
+          easing="ease"
+          pagination={false}
+        >
           <Item>
             {' '}
             <img
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.padVGlWkocZBXzu1H1eTewHaE8%26pid%3DApi&f=1"
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.D5_kFdYeFz_wVOlBdbytPwHaFA%26pid%3DApi&f=1"
               alt="img"
             />
           </Item>
           <Item>
             {' '}
             <img
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.chamberlain.edu%2Fmedia%2F7986%2Fnurse-strong_blog.jpg&f=1&nofb=1"
+              src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2061.00.jpg"
+              alt="img"
+            />
+          </Item>
+          <Item>
+            {' '}
+            <img
+              src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2061.00.jpg"
               alt="img"
             />
           </Item>
@@ -44,28 +60,28 @@ export default function Slideshow() {
           <Item>
             {' '}
             <img
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.D5_kFdYeFz_wVOlBdbytPwHaFA%26pid%3DApi&f=1"
+              src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2061.00.jpg"
               alt="img"
             />
           </Item>
           <Item>
             {' '}
             <img
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.D5_kFdYeFz_wVOlBdbytPwHaFA%26pid%3DApi&f=1"
+              src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2061.00.jpg"
               alt="img"
             />
           </Item>
           <Item>
             {' '}
             <img
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.padVGlWkocZBXzu1H1eTewHaE8%26pid%3DApi&f=1"
+              src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2061.00.jpg"
               alt="img"
             />
           </Item>
           <Item>
             {' '}
             <img
-              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.chamberlain.edu%2Fmedia%2F7986%2Fnurse-strong_blog.jpg&f=1&nofb=1"
+              src="https://cdn.careeronestop.org/OccVids/OccupationVideos/29-2061.00.jpg"
               alt="img"
             />
           </Item>
@@ -90,8 +106,8 @@ export default function Slideshow() {
   );
 }
 const CarouselWrapper = styled(Carousel)`
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 
   @media only screen and (max-width: ${({ res }) => res + 75}px) {
     width: ${({ res }) => res}px;
@@ -101,16 +117,15 @@ const CarouselWrapper = styled(Carousel)`
 const Item = styled.div`
   display: flex;
   justify-content: center;
-
-  height: 250px;
+  height: 100%;
   width: 100%;
-  background-color: #00008b;
-  color: #fff;
+  background-color: transparent;
+  color: transparent;
   margin: 0 15px;
-  font-size: 4em;
-  border: 2px solid blue;
 
   img {
+    height: 70%;
+    width: 70%;
     transition: all 0.5s;
     &:hover {
       transition: 0.5s ease-in-out;

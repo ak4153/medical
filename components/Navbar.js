@@ -149,8 +149,6 @@ function Navbar() {
 }
 const NavbarContainerWrapper = styled.div`
   @media only screen and (max-width: 2560px) {
-    margin-bottom: 40px;
-
     .navbar__burger-container {
       display: none;
     }
@@ -160,7 +158,6 @@ const NavbarContainerWrapper = styled.div`
     zindex: 9999;
     box-shadow: 0px 0px 0px 0px;
 
-    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
 
@@ -253,8 +250,8 @@ const NavbarWrapper = styled.nav`
     showXsNav
       ? ` 
       
-      width: 100%;
-    height: 100%;
+        width: 100%;
+        height: 427px;
         transition: all 0.3s ease-in;
         overflow:hidden;
         padding-right:40px;
@@ -292,9 +289,12 @@ const NavbarWrapper = styled.nav`
     .navbar__link-container__icons-phone {
       padding: 0;
     }
+
     `
       : `
-        transition: all 0.3s ease-in;
+      display:none;
+      
+        transition: all 0.3s linear;
         height: 100px;
     width: 100%;
 
@@ -314,6 +314,7 @@ const NavbarWrapper = styled.nav`
     .navbar__link-container__icons-phone {
       padding: 10px;
     }
+
   }
   &::before {
     content: '';
