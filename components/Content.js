@@ -14,7 +14,7 @@ import DividerText from './DividerText';
 import Tounge from './Tounge';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-
+import kuputHolim from '../content/kupotHolim';
 function Content() {
   const [showTounge, setShowTounge] = useState(false);
   const classess = useStyles();
@@ -57,7 +57,7 @@ function Content() {
                 image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.evidentlycochrane.net%2Fwp-content%2Fuploads%2F2016%2F02%2FiStock_nursepatient_Medium-e1455016519704.jpg&f=1&nofb=1"
                 alt="costumer"
               />
-              <CardContent>
+              <CardContent className="content__cards-cardcontent">
                 <p>אחות לילה</p>
               </CardContent>
             </CardWrapper>
@@ -72,14 +72,14 @@ function Content() {
                 alt="costumer"
               />
 
-              <CardContent>
+              <CardContent className="content__cards-cardcontent">
                 <p>אחות לאחר ניתוח</p>
               </CardContent>
             </CardWrapper>
           </Grid>
           <Grid item>
             <CardWrapper>
-              <CardContent>
+              <CardContent className="content__cards-cardcontent">
                 <p>מטפלת סיעודית</p>
               </CardContent>
               <CardMedia
@@ -93,7 +93,7 @@ function Content() {
 
           <Grid item>
             <CardWrapper>
-              <CardContent>
+              <CardContent className="content__cards-cardcontent">
                 <p>אחות פרטית</p>
               </CardContent>
               <CardMedia
@@ -113,9 +113,10 @@ function Content() {
         >
           <DividerText></DividerText>
         </Grid>
-        <Grid item className={classess.section}>
-          תוכן
-        </Grid>
+        {/* <Grid item className={classess.section}>
+        
+          {kuputHolim}
+        </Grid> */}
         <Grid
           item
           className={(classess.section, classess.colorDividerBottom)}
@@ -144,7 +145,7 @@ const CardWrapper = styled(Card)`
 `;
 const GridCardContainer = styled(Grid)`
   border-top: 1px #05445e solid;
-
+  padding-top: 5px;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -154,6 +155,10 @@ const GridCardContainer = styled(Grid)`
     font-weight: 800;
     font-size: 20px;
     margin: 0;
+    color: white;
+  }
+  .content__cards-cardcontent {
+    padding: 5px;
   }
 `;
 export default dynamicSSR(Content);

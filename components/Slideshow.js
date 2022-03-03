@@ -127,10 +127,12 @@ const Item = styled.div`
   img {
     height: 70%;
     width: 70%;
-    transition: all 0.5s;
+    ${
+      '' /* transition: all 0.5s;
     &:hover {
       transition: 0.5s ease-in-out;
       transform: scale(1.5, 1.5);
+    } */
     }
   }
 `;
