@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
-
-export default function Layout({ children }) {
+import dynamicSSR from '../utils/dynamicFunction';
+function Layout({ children }) {
   return (
     <LayoutWrapper>
       <Navbar></Navbar>
@@ -21,3 +21,4 @@ const BoddyWrapper = styled.div`
   height: 100%;
   padding-bottom: 170px;
 `;
+export default dynamicSSR(Layout);
