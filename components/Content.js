@@ -51,6 +51,7 @@ function Content() {
         >
           <Slideshow></Slideshow>
         </SlideshowContainerWrapper>
+
         <GridCardContainer container>
           <Grid item>
             <CardWrapper>
@@ -74,7 +75,6 @@ function Content() {
                 image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblogs.ed.ac.uk%2Fbulletin-magazine%2Fwp-content%2Fuploads%2Fsites%2F1304%2F2020%2F11%2F2958-scaled.jpg&f=1&nofb=1"
                 alt="costumer"
               />
-
               <CardContent className="content__cards-cardcontent">
                 <p>אחות לאחר ניתוח</p>
               </CardContent>
@@ -108,6 +108,7 @@ function Content() {
             </CardWrapper>
           </Grid>
         </GridCardContainer>
+
         <Grid
           item
           xs={12}
@@ -117,7 +118,7 @@ function Content() {
           <DividerText></DividerText>
         </Grid>
 
-        {/* <Grid item className={classess.section}>
+        <Grid item className={classess.section} xs={12}>
           <p className={classess.subTitle}>לבירור זכאות הקליקו על סמל קופתכם</p>
           <KuputHolimContainer>
             <img src={clalit.src} alt="clalit" />
@@ -125,7 +126,7 @@ function Content() {
             <img src={macabi.src} alt="macabi" />
             <img src={leumit.src} alt="leumit" />
           </KuputHolimContainer>
-        </Grid> */}
+        </Grid>
 
         {/* 
         <Grid
@@ -143,7 +144,6 @@ const SlideshowContainerWrapper = styled(Grid)`
 `;
 const CardWrapper = styled(Card)`
   width: 100px;
-  background-color: #2e8bc0;
   margin-left: 50px;
   transform: translate(0);
   margin-top: 20px;
@@ -153,7 +153,11 @@ const CardWrapper = styled(Card)`
     transform: translate(0, -20px);
     transition: all 0.2s ease-in-out;
   }
+  .content__cards-cardcontent {
+    background-color: #2e8bc0;
+  }
 `;
+
 const GridCardContainer = styled(Grid)`
   border-top: 1px #05445e solid;
   padding-top: 5px;

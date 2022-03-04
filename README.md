@@ -1,20 +1,12 @@
 ## About
 
-Demo - <a href="https://medical-psi.vercel.app/">Demo</a>
+Demo - <a href="https://medical-ak4153.vercel.app/">Demo</a>
 Responsive website for a costumer in the medical HR business
+
+device support >= 325 pixels via CSS @media queries
 
 Next.js project
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+download > unpack > npm run dev > http://localhost:3000 > enjoy

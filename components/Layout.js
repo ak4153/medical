@@ -13,7 +13,9 @@ export default function Layout({ children }) {
   );
 }
 
-const BoddyWrapper = styled.div``;
+const BoddyWrapper = styled.div`
+  padding: 0 10px 0 10px;
+`;
 const FooterWrapper = styled(Footer)``;
 const MainContainer = styled.div`
   min-height: 100vh;
