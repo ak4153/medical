@@ -117,7 +117,7 @@ function Content() {
           <DividerText></DividerText>
         </Grid>
 
-        <Grid item xs={12} className={classess.section}>
+        <Grid item className={classess.section}>
           <p className={classess.subTitle}>לבירור זכאות הקליקו על סמל קופתכם</p>
           <KuputHolimContainer>
             <img src={clalit.src} alt="clalit" />
