@@ -14,7 +14,10 @@ import DividerText from './DividerText';
 import Tounge from './Tounge';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import kuputHolim from '../content/kupotHolim';
+import clalit from '../assets/clalit.png';
+import meuhedet from '../assets/meuhedet.png';
+import macabi from '../assets/macabi.png';
+import leumit from '../assets/leumit.png';
 function Content() {
   const [showTounge, setShowTounge] = useState(false);
   const classess = useStyles();
@@ -113,15 +116,23 @@ function Content() {
         >
           <DividerText></DividerText>
         </Grid>
-        {/* <Grid item className={classess.section}>
-        
-          {kuputHolim}
-        </Grid> */}
+
+        <Grid item xs={12} className={classess.section}>
+          <p className={classess.subTitle}>לבירור זכאות הקליקו על סמל קופתכם</p>
+          <KuputHolimContainer>
+            <img src={clalit.src} alt="clalit" />
+            <img src={meuhedet.src} alt="meuhedet" />
+            <img src={macabi.src} alt="macabi" />
+            <img src={leumit.src} alt="leumit" />
+          </KuputHolimContainer>
+        </Grid>
+
+        {/* 
         <Grid
           item
           className={(classess.section, classess.colorDividerBottom)}
           xs={12}
-        ></Grid>
+        ></Grid> */}
       </Grid>
     </Box>
   );
@@ -159,6 +170,21 @@ const GridCardContainer = styled(Grid)`
   }
   .content__cards-cardcontent {
     padding: 5px;
+  }
+`;
+
+const KuputHolimContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  img {
+    padding: 5px;
+  }
+  p {
+    font-size: 3rem;
   }
 `;
 export default dynamicSSR(Content);

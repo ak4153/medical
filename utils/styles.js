@@ -76,6 +76,11 @@ const useStyles = makeStyles({
       color: '#B1D4E0',
     },
   },
+  subTitle: {
+    fontSize: '2.5rem',
+    fontWeight: 800,
+    padding: 0,
+  },
 });
 export default useStyles;
 
