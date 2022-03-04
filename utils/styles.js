@@ -44,7 +44,6 @@ const useStyles = makeStyles({
     fontSize: '20px',
     width: '100%',
     fontWeight: 800,
-
     textAlign: 'right',
   },
   cardContainer: {

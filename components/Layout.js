@@ -3,22 +3,18 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
 import dynamicSSR from '../utils/dynamicFunction';
-function Layout({ children }) {
+export default function Layout({ children }) {
   return (
-    <LayoutWrapper>
+    <>
       <Navbar></Navbar>
       <BoddyWrapper>{children}</BoddyWrapper>
       <Footer></Footer>
-    </LayoutWrapper>
+    </>
   );
 }
 
-const LayoutWrapper = styled.div`
-  min-height: 100%;
-  position: relative;
-`;
 const BoddyWrapper = styled.div`
   height: 100%;
-  padding-bottom: 170px;
+  padding: 10px;
+  padding-bottom: 240px;
 `;
-export default dynamicSSR(Layout);
