@@ -30,9 +30,11 @@ export default function Footer() {
 }
 
 const FooterWrapper = styled(Box)`
-  position: absolute;
   background-color: #0c2d48;
+  position: absolute;
+
   bottom: 0;
+
   height: 170px;
   padding: 50px 20px 0 20px;
   font-size: 20px;

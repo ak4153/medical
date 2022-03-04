@@ -5,16 +5,19 @@ import styled from 'styled-components';
 import dynamicSSR from '../utils/dynamicFunction';
 export default function Layout({ children }) {
   return (
-    <>
+    <MainContainer>
       <Navbar></Navbar>
       <BoddyWrapper>{children}</BoddyWrapper>
-      <Footer></Footer>
-    </>
+      <FooterWrapper></FooterWrapper>
+    </MainContainer>
   );
 }
 
-const BoddyWrapper = styled.div`
-  height: 100%;
-  padding: 10px;
-  padding-bottom: 240px;
+const BoddyWrapper = styled.div``;
+const FooterWrapper = styled(Footer)``;
+const MainContainer = styled.div`
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 225px;
+  display: block;
 `;
