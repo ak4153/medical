@@ -8,7 +8,7 @@ function Footer() {
   const date = new Date();
   return (
     <Box className={classess.footer}>
-      <Grid container className={classess.footerContainer} spacing={3}>
+      <Grid container className={classess.footerContainer} spacing={3} xs={12}>
         <Grid item>אב"ג שירותי סיעוד בע"מ</Grid>
         <Grid item> הירקון 116, תל-אביב</Grid>
         <Grid item>054-7005544</Grid>
