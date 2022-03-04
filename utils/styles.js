@@ -36,9 +36,11 @@ const useStyles = makeStyles({
     color: '#B1D4E0',
   },
   footer: {
+    position: 'absolute',
     backgroundColor: '#0C2D48',
-    height: 100,
-    padding: 20,
+    bottom: 0,
+    height: '170px',
+    padding: '50px 20px 0 20px',
     fontSize: '20px',
     width: '100%',
     fontWeight: 800,

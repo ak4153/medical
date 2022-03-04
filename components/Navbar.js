@@ -65,7 +65,7 @@ function Navbar() {
           </NextLink>
         </div>
         <div className="navbar__link-container">
-          <NextLink href="/" passHref>
+          <NextLink href="/services" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
@@ -80,7 +80,7 @@ function Navbar() {
         </div>
 
         <div className="navbar__link-container">
-          <NextLink href="/" passHref>
+          <NextLink href="/professionalTeam" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
@@ -95,7 +95,7 @@ function Navbar() {
         </div>
 
         <div className="navbar__link-container">
-          <NextLink href="/" passHref>
+          <NextLink href="/wanted" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
@@ -109,7 +109,7 @@ function Navbar() {
           </NextLink>
         </div>
         <div className="navbar__link-container">
-          <NextLink href="/" passHref>
+          <NextLink href="/contact" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
@@ -123,7 +123,7 @@ function Navbar() {
           </NextLink>
         </div>
         <div className="navbar__link-container">
-          <NextLink href="/" passHref>
+          <NextLink href="/about" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
