@@ -41,19 +41,17 @@ function Content() {
     <Box className={classess.content}>
       <Tounge showTounge={showTounge}></Tounge>
       <Grid container className={classess.contentContainer}>
-        <Grid item className={classess.section}></Grid>
-
         <SlideshowContainerWrapper
           item
           style={{ paddingLeft: '25px', paddingRight: '25px' }}
-          className={(classess.section, classess.colorDividerTop)}
+          className={classess.colorDividerTop}
           xs={12}
         >
           <Slideshow></Slideshow>
         </SlideshowContainerWrapper>
 
         <GridCardContainer container>
-          <Grid item>
+          <GridItemWrapper item>
             <CardWrapper>
               <CardMedia
                 component="img"
@@ -65,9 +63,9 @@ function Content() {
                 <p>אחות לילה</p>
               </CardContent>
             </CardWrapper>
-          </Grid>
+          </GridItemWrapper>
 
-          <Grid item>
+          <GridItemWrapper item>
             <CardWrapper>
               <CardMedia
                 component="img"
@@ -79,8 +77,8 @@ function Content() {
                 <p>אחות לאחר ניתוח</p>
               </CardContent>
             </CardWrapper>
-          </Grid>
-          <Grid item>
+          </GridItemWrapper>
+          <GridItemWrapper item>
             <CardWrapper>
               <CardContent className="content__cards-cardcontent">
                 <p>מטפלת סיעודית</p>
@@ -92,9 +90,9 @@ function Content() {
                 alt="costumer"
               />
             </CardWrapper>
-          </Grid>
+          </GridItemWrapper>
 
-          <Grid item>
+          <GridItemWrapper item>
             <CardWrapper>
               <CardContent className="content__cards-cardcontent">
                 <p>אחות פרטית</p>
@@ -106,19 +104,23 @@ function Content() {
                 alt="costumer"
               />
             </CardWrapper>
-          </Grid>
+          </GridItemWrapper>
         </GridCardContainer>
 
-        <Grid
+        <GridItemWrapper
           item
           xs={12}
           style={{ paddingLeft: '50px', paddingRight: '50px' }}
-          className={(classess.section, classess.colorDividerBottom)}
+          className={classess.colorDividerBottom}
         >
           <DividerText></DividerText>
-        </Grid>
+        </GridItemWrapper>
 
-        <Grid item className={classess.section} xs={12}>
+        <GridItemWrapper
+          item
+          className="content__grid-item__kuputholim-section"
+          xs={12}
+        >
           <p className={classess.subTitle}>לבירור זכאות הקליקו על סמל קופתכם</p>
           <KuputHolimContainer>
             <img src={clalit.src} alt="clalit" />
@@ -126,14 +128,9 @@ function Content() {
             <img src={macabi.src} alt="macabi" />
             <img src={leumit.src} alt="leumit" />
           </KuputHolimContainer>
-        </Grid>
+        </GridItemWrapper>
 
-        {/* 
-        <Grid
-          item
-          className={(classess.section, classess.colorDividerBottom)}
-          xs={12}
-        ></Grid> */}
+        <GridItemWrapper item xs={12}></GridItemWrapper>
       </Grid>
     </Box>
   );
@@ -190,5 +187,10 @@ const KuputHolimContainer = styled.div`
   p {
     font-size: 3rem;
   }
+`;
+const GridItemWrapper = styled(Grid)`
+  height: 100%;
+  flex-grow: 1;
+  margin-bottom: 10px;
 `;
 export default dynamicSSR(Content);

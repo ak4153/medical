@@ -41,6 +41,9 @@ const FooterWrapper = styled(Box)`
   width: 100%;
   font-weight: 800;
   text-align: right;
+  @media only screen and (max-width: 411px) {
+    height: 250px;
+  }
 `;
 const FooterContentWrapper = styled(Grid)`
   justify-content: center;
