@@ -48,7 +48,7 @@ export default function DividerText() {
           textAlign: 'center',
         }}
       >
-        052-7456683 אלכס
+        <a href="tel:0527456683"> אלכס 052-7456683</a>
       </h2>
     </div>
   );

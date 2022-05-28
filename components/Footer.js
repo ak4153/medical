@@ -12,7 +12,9 @@ export default function Footer() {
     <FooterWrapper>
       <FooterContentWrapper container spacing={3}>
         <Grid item>שירות עיקור וחיטוי מזגנים</Grid>
-        <Grid item> 052-7456683</Grid>
+        <Grid item>
+          <a href="tel:0527456683"> אלכס 052-7456683</a>
+        </Grid>
       </FooterContentWrapper>
       <FooterContentWrapper container spacing={3}>
         <Grid item>{/* <FacebookSharpIcon /> */}</Grid>

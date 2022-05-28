@@ -143,7 +143,7 @@ function Navbar() {
           className={`${classess.linkColor} navbar__link-container__icons navbar__link-container__icons-phone`}
         >
           <PhoneIcon />
-          <p>052-7456683</p>
+          <a href="tel:0527456683"> אלכס 052-7456683</a>
         </div>
       </NavbarWrapper>
     </NavbarContainerWrapper>
@@ -191,7 +191,7 @@ const NavbarWrapper = styled.nav`
     flex-direction: row;
     justify-content: space-evenly;
 
-    align-items: center;
+
     background-color:transaparent;
     color: white;
 
@@ -202,9 +202,11 @@ const NavbarWrapper = styled.nav`
     font-size: 60px;
     font-weight: 800;
 
-    &::before {
+    ${
+      '' /* &::before {
       font-size: 40px;
       content: '🩺';
+    } */
     }
   }
 
@@ -248,25 +250,27 @@ const NavbarWrapper = styled.nav`
   }
 
   @media only screen and (max-width: 426px) {
-    &::after {
+    ${
+      '' /* &::after {
         text-align: center;
         font-size: 30px;
         content: '🩺';
-      }
+      } */
+    }
 
   ${({ showXsNav }) =>
     showXsNav
       ? ` 
       
         width: 100%;
-        height: 427px;
+        height:270px;
         transition: all 0.3s ease-in;
         overflow:hidden;
         padding-right:40px;
-       
+    display:flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: column-reverse;
+    justify-content: flex-start;
 
 
     background-color:transaparent;
@@ -295,7 +299,7 @@ const NavbarWrapper = styled.nav`
       content: '';
     }
     .navbar__link-container__icons-phone {
-      padding: 0;
+      text-align: right;
     }
 
     `
@@ -311,7 +315,7 @@ const NavbarWrapper = styled.nav`
     font-weight: 800;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: flex-end;
     flex-wrap: wrap;
     align-content: flex-end;
