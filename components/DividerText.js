@@ -40,8 +40,8 @@ export default function DividerText() {
           padding: '6px',
         }}
       >
-        עיקור מזגן ראשון <span style={{ color: 'darkblue' }}>250&#8362;</span>{' '}
-        <span style={{ color: 'darkgreen' }}> והשני בחינם</span>
+        עיקור מזגן ראשון <span style={{ color: 'darkblue' }}></span>{' '}
+        <span style={{ color: 'darkgreen' }}> בחינם</span>
       </h2>
       <h2
         style={{
