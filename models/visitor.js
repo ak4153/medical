@@ -6,5 +6,5 @@ const visitorSchema = new mongoose.Schema({
 });
 
 const Visitor =
-  mongoose.models.Visitor || mmongoose.model('Visitor', visitorSchema);
+  mongoose.models.Visitor || mongoose.model('Visitor', visitorSchema);
 export default Visitor;
