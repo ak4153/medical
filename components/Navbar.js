@@ -55,7 +55,7 @@ function Navbar() {
             <Link
               className={classess.linkColor}
               underline="none"
-              color={'#B1D4E0'}
+              color={'white'}
             >
               <div className="navbar__link-container__icons">
                 <HomeIcon fontSize="large" />
@@ -69,22 +69,22 @@ function Navbar() {
             <Link
               className={classess.linkColor}
               underline="none"
-              color={'#B1D4E0'}
+              color={'white'}
             >
               <div className="navbar__link-container__icons">
                 <SpaIcon fontSize="large" />
-                <p>שירותים</p>
+                <p>שירות</p>
               </div>
             </Link>
           </NextLink>
         </div>
 
-        <div className="navbar__link-container">
+        {/* <div className="navbar__link-container">
           <NextLink href="/professionalTeam" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
-              color={'#B1D4E0'}
+              color={'white'}
             >
               <div className="navbar__link-container__icons">
                 <PeopleIcon fontSize="large" />
@@ -92,14 +92,14 @@ function Navbar() {
               </div>
             </Link>
           </NextLink>
-        </div>
+        </div> */}
 
-        <div className="navbar__link-container">
+        {/* <div className="navbar__link-container">
           <NextLink href="/wanted" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
-              color={'#B1D4E0'}
+              color={'white'}
             >
               <div className="navbar__link-container__icons">
                 <ManIcon fontSize="large" />
@@ -107,13 +107,14 @@ function Navbar() {
               </div>
             </Link>
           </NextLink>
-        </div>
-        <div className="navbar__link-container">
+        </div> */}
+
+        {/* <div className="navbar__link-container">
           <NextLink href="/contact" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
-              color={'#B1D4E0'}
+              color={'white'}
             >
               <div className="navbar__link-container__icons">
                 <EmailIcon fontSize="large" />
@@ -122,12 +123,13 @@ function Navbar() {
             </Link>
           </NextLink>
         </div>
+
         <div className="navbar__link-container">
           <NextLink href="/about" passHref>
             <Link
               className={classess.linkColor}
               underline="none"
-              color={'#B1D4E0'}
+              color={'white'}
             >
               <div className="navbar__link-container__icons">
                 <InfoIcon fontSize="large" />
@@ -135,19 +137,22 @@ function Navbar() {
               </div>
             </Link>
           </NextLink>
-        </div>
+        </div> */}
 
         <div
           className={`${classess.linkColor} navbar__link-container__icons navbar__link-container__icons-phone`}
         >
           <PhoneIcon />
-          <p>054-7005544</p>
+          <p>052-7456683</p>
         </div>
       </NavbarWrapper>
     </NavbarContainerWrapper>
   );
 }
 const NavbarContainerWrapper = styled.div`
+  position: relative;
+  z-index: 9999;
+  top: 0;
   @media only screen and (max-width: 2560px) {
     .navbar__burger-container {
       display: none;
@@ -155,7 +160,7 @@ const NavbarContainerWrapper = styled.div`
   }
 
   @media only screen and (max-width: 426px) {
-    zindex: 9999;
+    z-index: 9999;
     box-shadow: 0px 0px 0px 0px;
 
     display: flex;
@@ -179,14 +184,16 @@ const NavbarContainerWrapper = styled.div`
 `;
 
 const NavbarWrapper = styled.nav`
+
   @media only screen and (max-width: 2560px) {
+    
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 
     align-items: center;
-    background-color: #145da0;
-    color: #b1d4e0;
+    background-color:transaparent;
+    color: white;
 
     height: 150px;
     width: 100%;
@@ -213,6 +220,7 @@ const NavbarWrapper = styled.nav`
   }
 
   @media only screen and (max-width: 1440px) {
+    
     height: 120px;
     width: 100%;
 
@@ -261,7 +269,7 @@ const NavbarWrapper = styled.nav`
     justify-content: center;
 
 
-    background-color: #145da0;
+    background-color:transaparent;
    
     text-align: right;
     zindex: 9999;
@@ -342,14 +350,14 @@ const NavbarWrapper = styled.nav`
     width: 100%;
     height: 300px;
 
-    background-color: #145da0;
+    background-color:transaparent;
     padding: 0;
     text-align: right;
     zindex: 9999;
 
     border: 2px solid black;
     border-radius: 10px;
-    color: #b1d4e0;
+    color: white;
     font-size: 30px;
     font-weight: 800;
     line-height: 1px;

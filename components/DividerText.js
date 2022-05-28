@@ -17,29 +17,58 @@ const Root = styled('div')(({ theme }) => ({
 export default function DividerText() {
   const content = (
     <div>
-      {`    נך וסתעד לכנו סתשם השמה - לתכי מורגם בורק? לתיג ישבעס.
+      <h2>אם הוא נראה כמו בתמונות שלמעלה, כדאי מאוד להזמין ניקוי עמוק</h2>
+      <h3
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        כבר אמרתי שהמחיר ליגה?
+      </h3>
+      <h3
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        וכנראה המחיר הזול ביותר בשוק
+      </h3>
 
-נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
-
-קולהע צופעט למרקוח איבן איף, ברומץ כלרשט מיחוצים. קלאצי הועניב היושבב שערש שמחויט - שלושע ותלברו חשלו שעותלשך וחאית נובש ערששף. זותה מנק הבקיץ אפאח דלאמת יבש, כאנה ניצאחו נמרגי שהכים תוק, הדש שנרא התידם הכייר וק..`}
+      <h2
+        style={{
+          textAlign: 'center',
+          border: '2px solid blue',
+          padding: '6px',
+        }}
+      >
+        עיקור מזגן ראשון <span style={{ color: 'darkblue' }}>250&#8362;</span>{' '}
+        <span style={{ color: 'darkgreen' }}> והשני בחינם</span>
+      </h2>
+      <h2
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        052-7456683 אלכס
+      </h2>
     </div>
   );
   const content1 = (
     <div className="content__divider-container">
       <div className="content__divider-container__speciality">
+        <h2>אז... אם לא השתכנעתם מהתמונות ומהסרטון הנה כמה סיבות:</h2>
         <div className="content__divider-speciality">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Symbol_voting_keep.svg/233px-Symbol_voting_keep.svg.png"
             alt="V"
           />
-          <p>הגינות</p>
+          <p>השמדת 99% מהחיידקים שחיים במזגן</p>
         </div>
         <div className="content__divider-speciality">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Symbol_voting_keep.svg/233px-Symbol_voting_keep.svg.png"
             alt="V"
           />
-          <p>מיומנות</p>
+          <p>מניעת פיזור עובש וחיידקים בחלל החדר</p>
         </div>
       </div>
 
@@ -49,7 +78,7 @@ export default function DividerText() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Symbol_voting_keep.svg/233px-Symbol_voting_keep.svg.png"
             alt="V"
           />
-          <p>מהימנות</p>
+          <p>טיהור האוויר בחדר</p>
         </div>
 
         <div className="content__divider-speciality">
@@ -57,7 +86,15 @@ export default function DividerText() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Symbol_voting_keep.svg/233px-Symbol_voting_keep.svg.png"
             alt="V"
           />
-          <p>מחיר</p>
+          <p>תפוקת המזגן תעלה ב30%</p>
+        </div>
+
+        <div className="content__divider-speciality">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Symbol_voting_keep.svg/233px-Symbol_voting_keep.svg.png"
+            alt="V"
+          />
+          <p>מניעת פיזור עובש וחיידקים בחלל החדר</p>
         </div>
       </div>
     </div>
@@ -66,11 +103,11 @@ export default function DividerText() {
   return (
     <RootWrapper>
       <DividerWrapper>
-        <h1>קצת עלינו</h1>
+        <h1>תבדקו את פתח האוורור של המזגן שלכם</h1>
       </DividerWrapper>
 
       {content}
-      <DividerWrapper>למה לבחור בנו</DividerWrapper>
+      <DividerWrapper>"מה יוצא לי מזה??"</DividerWrapper>
 
       {content1}
     </RootWrapper>
@@ -82,17 +119,14 @@ const DividerWrapper = styled(Divider)`
 const RootWrapper = styled(Root)`
   .content__divider-container {
     display: flex;
-    flex-direction: row;
-    justify-contetn: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 
   .content__divider-container__speciality {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-contetn: center;
-    align-items: stretch;
   }
 
   .content__divider-speciality {

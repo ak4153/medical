@@ -14,7 +14,7 @@ export default function Layout({ children }) {
 }
 
 const BoddyWrapper = styled.div`
-  padding: 0 10px 0 10px;
+  padding: 0;
 `;
 const FooterWrapper = styled(Footer)``;
 const MainContainer = styled.div`

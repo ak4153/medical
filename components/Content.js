@@ -8,6 +8,7 @@ import {
   Grid,
   Typography,
 } from '@material-ui/core';
+import Video from './Video';
 import dynamicSSR from '../utils/dynamicFunction';
 import Slideshow from '../components/Slideshow';
 import DividerText from './DividerText';
@@ -41,16 +42,21 @@ function Content() {
     <Box className={classess.content}>
       <Tounge showTounge={showTounge}></Tounge>
       <Grid container className={classess.contentContainer}>
-        <SlideshowContainerWrapper
+        <Grid
           item
-          style={{ paddingLeft: '25px', paddingRight: '25px' }}
-          className={classess.colorDividerTop}
-          xs={12}
-        >
-          <Slideshow></Slideshow>
-        </SlideshowContainerWrapper>
+          style={{
+            zIndex: 0,
 
-        <GridCardContainer container>
+            marginTop: '-120px',
+            height: '100%',
+            width: '100%',
+            padding: 0,
+          }}
+        >
+          <Video></Video>
+        </Grid>
+
+        {/* <GridCardContainer container>
           <GridItemWrapper item>
             <CardWrapper>
               <CardMedia
@@ -105,7 +111,15 @@ function Content() {
               />
             </CardWrapper>
           </GridItemWrapper>
-        </GridCardContainer>
+        </GridCardContainer> */}
+        <SlideshowContainerWrapper
+          item
+          style={{ paddingLeft: '25px', paddingRight: '25px' }}
+          className={classess.colorDividerTop}
+          xs={12}
+        >
+          <Slideshow></Slideshow>
+        </SlideshowContainerWrapper>
 
         <GridItemWrapper
           item
@@ -116,7 +130,7 @@ function Content() {
           <DividerText></DividerText>
         </GridItemWrapper>
 
-        <GridItemWrapper
+        {/* <GridItemWrapper
           item
           className="content__grid-item__kuputholim-section"
           xs={12}
@@ -128,7 +142,7 @@ function Content() {
             <img src={macabi.src} alt="macabi" />
             <img src={leumit.src} alt="leumit" />
           </KuputHolimContainer>
-        </GridItemWrapper>
+        </GridItemWrapper> */}
 
         <GridItemWrapper item xs={12}></GridItemWrapper>
       </Grid>
@@ -193,4 +207,5 @@ const GridItemWrapper = styled(Grid)`
   flex-grow: 1;
   margin-bottom: 10px;
 `;
+
 export default dynamicSSR(Content);

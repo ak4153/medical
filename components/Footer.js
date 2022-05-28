@@ -11,14 +11,11 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <FooterContentWrapper container spacing={3}>
-        <Grid item>אב"ג שירותי סיעוד בע"מ</Grid>
-        <Grid item> הירקון 116, תל-אביב</Grid>
-        <Grid item>054-7005544</Grid>
+        <Grid item>שירות עיקור וחיטוי מזגנים</Grid>
+        <Grid item> 052-7456683</Grid>
       </FooterContentWrapper>
       <FooterContentWrapper container spacing={3}>
-        <Grid item>
-          <FacebookSharpIcon />
-        </Grid>
+        <Grid item>{/* <FacebookSharpIcon /> */}</Grid>
       </FooterContentWrapper>
       <FooterContentWrapper container spacing={3}>
         <Grid item>
