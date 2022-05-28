@@ -5,6 +5,7 @@ const connection = {};
 
 //connect-creates a new connection if a connection isnt fount
 //
+const mongouri = 'mongodb://127.0.0.1:27017/visitcount';
 async function connect() {
   if (connection.isConnected) {
     console.log('already connected');
@@ -20,7 +21,7 @@ async function connect() {
   }
 
   //a connection is created here
-  const db = await mongoose.connect(process.env.MONGODB_URI, {
+  const db = await mongoose.connect(process.env.MONGODB_URI || mongouri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });

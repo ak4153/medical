@@ -3,6 +3,7 @@ import db from '../../utils/db';
 import Visitor from '../../models/visitor';
 export default async function handler(req, res) {
   if (req.method === 'POST') {
+    console.log('ss');
     const { ip, country } = req.body.data.ip;
     try {
       const newVisitor = new Visitor({
@@ -11,16 +12,17 @@ export default async function handler(req, res) {
       });
       await db.connect();
       await newVisitor.save();
-      res.status(202);
+      res.status(202).end();
       await db.disconnect();
     } catch (error) {
       await db.disconnect();
-      res.status(418);
+      res.status(418).end();
     }
   }
   if (req.method === 'GET') {
     await db.connect();
-    console.log(Visitor.find());
+    const data = await Visitor.find({});
+    res.json(data).end();
     await db.disconnect();
   }
 }

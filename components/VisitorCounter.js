@@ -9,8 +9,12 @@ export default function VisitorCount() {
       .then((result) => {
         axios
           .post('/api/counter', { data: result.data })
-          .then((visitResult) => {})
-          .catch((err) => {});
+          .then((visitResult) => {
+            console.log('ret');
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       })
       .catch((err) => console.log(err));
   }, []);
