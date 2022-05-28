@@ -103,7 +103,7 @@ export default function DividerText() {
   return (
     <RootWrapper>
       <DividerWrapper>
-        <h1>בדקו את המזגן שלכם</h1>
+        <h2>בדקו את המזגן שלכם</h2>
       </DividerWrapper>
 
       {content}
