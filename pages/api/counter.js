@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   if (req.method === 'GET') {
     await db.connect();
     const data = await Visitor.find({});
-    res.json(data).end();
+    res.json(data);
     await db.disconnect();
   }
 }
